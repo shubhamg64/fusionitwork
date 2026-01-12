@@ -79,7 +79,7 @@ export default function Contact() {
                   </div>
                   <div>
                     <h4 className="font-semibold text-gray-900 mb-1">Email</h4>
-                    <p className="text-gray-600">info@fusiinitworks.com</p>
+                    <p className="text-gray-600">info@fusionitworks.com</p>
                   </div>
                 </div>
 

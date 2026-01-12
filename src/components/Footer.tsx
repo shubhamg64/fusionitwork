@@ -12,7 +12,7 @@ export default function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
           <div className="col-span-1 md:col-span-2">
             <h3 className="text-2xl font-bold bg-gradient-to-r from-blue-400 to-cyan-400 bg-clip-text text-transparent mb-4">
-              Fusiin IT Works
+              Fusion IT Works
             </h3>
             <p className="text-gray-400 mb-4">
               Transforming businesses through innovative digital solutions. We specialize in digital marketing, SEO, and comprehensive IT services.
@@ -70,7 +70,7 @@ export default function Footer() {
             <ul className="space-y-3 text-gray-400">
               <li className="flex items-start space-x-3">
                 <Mail size={20} className="mt-1 flex-shrink-0" />
-                <span>info@fusiinitworks.com</span>
+                <span>info@fusionitworks.com</span>
               </li>
               <li className="flex items-start space-x-3">
                 <Phone size={20} className="mt-1 flex-shrink-0" />
@@ -85,7 +85,7 @@ export default function Footer() {
         </div>
 
         <div className="border-t border-gray-800 mt-8 pt-8 text-center text-gray-400">
-          <p>&copy; {new Date().getFullYear()} Fusiin IT Works. All rights reserved.</p>
+          <p>&copy; {new Date().getFullYear()} Fusion IT Works. All rights reserved.</p>
         </div>
       </div>
     </footer>
