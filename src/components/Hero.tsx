@@ -36,7 +36,7 @@ export default function Hero() {
             <h1 className="text-5xl sm:text-6xl font-bold leading-tight">
               Transform Your Business with{' '}
               <span className="bg-gradient-to-r from-blue-600 to-cyan-600 bg-clip-text text-transparent">
-                Fusiin IT Works
+                Fusion IT Works
               </span>
             </h1>
 
