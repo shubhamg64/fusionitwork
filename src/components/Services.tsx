@@ -120,22 +120,24 @@ export default function Services() {
                 key={index}
                 data-index={index}
                 data-service={service.title}
-                className={`service-card group ${service.bgColor} rounded-2xl p-8 hover:shadow-2xl transition-all duration-500 transform ${
+                className={`service-card group relative ${service.bgColor} rounded-2xl p-8 hover:shadow-2xl transition-all duration-500 transform overflow-hidden ${
                   isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'
                 }`}
                 style={{ transitionDelay: `${index * 100}ms` }}
               >
-                <div className={`w-16 h-16 bg-gradient-to-br ${service.color} rounded-xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform`}>
+                <div className="absolute inset-0 bg-gradient-to-br opacity-0 group-hover:opacity-5 transition-opacity duration-500" />
+
+                <div className={`w-16 h-16 bg-gradient-to-br ${service.color} rounded-xl flex items-center justify-center mb-6 group-hover:scale-110 transition-all group-hover:shadow-lg shadow-lg shadow-${service.color.split(' ')[1]}/30`}>
                   <Icon className="text-white" size={32} />
                 </div>
 
-                <h3 className="text-2xl font-bold mb-3 text-gray-900">{service.title}</h3>
+                <h3 className="text-2xl font-bold mb-3 text-gray-900 group-hover:translate-x-1 transition-transform">{service.title}</h3>
                 <p className="text-gray-600 mb-6 leading-relaxed">{service.description}</p>
 
                 <ul className="space-y-2">
                   {service.features.map((feature, featureIndex) => (
-                    <li key={featureIndex} className="flex items-center space-x-2 text-gray-700">
-                      <div className={`w-1.5 h-1.5 bg-gradient-to-br ${service.color} rounded-full`}></div>
+                    <li key={featureIndex} className="flex items-center space-x-2 text-gray-700 group-hover:translate-x-1 transition-transform" style={{ transitionDelay: `${featureIndex * 50}ms` }}>
+                      <div className={`w-1.5 h-1.5 bg-gradient-to-br ${service.color} rounded-full animate-pulse-glow`}></div>
                       <span>{feature}</span>
                     </li>
                   ))}

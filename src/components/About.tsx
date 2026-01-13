@@ -52,35 +52,41 @@ export default function About() {
               return (
                 <div
                   key={index}
-                  className="bg-white rounded-2xl p-6 shadow-lg hover:shadow-xl transition-all hover:-translate-y-1"
+                  className="bg-white rounded-2xl p-6 shadow-lg hover:shadow-xl transition-all hover:-translate-y-2 group hover:bg-gradient-to-br hover:from-blue-50 hover:to-cyan-50 relative overflow-hidden"
                 >
-                  <div className="w-12 h-12 bg-gradient-to-br from-blue-600 to-cyan-600 rounded-lg flex items-center justify-center mb-4">
-                    <Icon className="text-white" size={24} />
+                  <div className="absolute inset-0 opacity-0 group-hover:opacity-10 transition-opacity duration-500 bg-gradient-to-br from-blue-200 to-cyan-200 rounded-2xl" />
+                  <div className="relative z-10">
+                    <div className="w-12 h-12 bg-gradient-to-br from-blue-600 to-cyan-600 rounded-lg flex items-center justify-center mb-4 group-hover:scale-110 transition-transform shadow-lg">
+                      <Icon className="text-white" size={24} />
+                    </div>
+                    <h3 className="text-xl font-bold mb-2 text-gray-900 group-hover:translate-x-1 transition-transform">{feature.title}</h3>
+                    <p className="text-gray-600 leading-relaxed group-hover:text-gray-700 transition-colors">{feature.description}</p>
                   </div>
-                  <h3 className="text-xl font-bold mb-2 text-gray-900">{feature.title}</h3>
-                  <p className="text-gray-600 leading-relaxed">{feature.description}</p>
                 </div>
               );
             })}
           </div>
         </div>
 
-        <div className="mt-20 bg-gradient-to-r from-blue-600 to-cyan-600 rounded-3xl p-12 text-white text-center">
-          <h3 className="text-3xl sm:text-4xl font-bold mb-4">Ready to Transform Your Business?</h3>
-          <p className="text-xl mb-8 opacity-90">
-            Let's discuss how we can help you achieve your digital goals
-          </p>
-          <button
-            onClick={() => {
-              const element = document.getElementById('contact');
-              if (element) {
-                element.scrollIntoView({ behavior: 'smooth' });
-              }
-            }}
-            className="px-8 py-4 bg-white text-blue-600 rounded-lg hover:bg-gray-100 transition-all font-semibold text-lg hover:scale-105"
-          >
-            Start Your Project Today
-          </button>
+        <div className="mt-20 bg-gradient-to-r from-blue-600 to-cyan-600 rounded-3xl p-12 text-white text-center relative overflow-hidden group">
+          <div className="absolute inset-0 opacity-0 group-hover:opacity-20 transition-opacity duration-500 bg-gradient-to-r from-white to-transparent" />
+          <div className="relative z-10">
+            <h3 className="text-3xl sm:text-4xl font-bold mb-4 group-hover:scale-105 transition-transform origin-center">Ready to Transform Your Business?</h3>
+            <p className="text-xl mb-8 opacity-90 group-hover:opacity-100 transition-opacity">
+              Let's discuss how we can help you achieve your digital goals
+            </p>
+            <button
+              onClick={() => {
+                const element = document.getElementById('contact');
+                if (element) {
+                  element.scrollIntoView({ behavior: 'smooth' });
+                }
+              }}
+              className="px-8 py-4 bg-white text-blue-600 rounded-lg hover:bg-gray-100 transition-all font-semibold text-lg hover:scale-110 shadow-lg hover:shadow-2xl"
+            >
+              Start Your Project Today
+            </button>
+          </div>
         </div>
       </div>
     </section>
